@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sum_arithmetic_series() {
+    first_term=$1
+    last_term=$2
+    num_terms=$3
+
+    # Calculate the sum
+    sum=$(( (num_terms * (first_term + last_term)) / 2 ))
+
+    echo "Sum of the arithmetic series: $sum"
+}
+
+# Get user input
+read -p "Enter the first term: " first
+read -p "Enter the last term: " last
+read -p "Enter the number of terms: " n
+
+# Call the function with user input
+sum_arithmetic_series $first $last $n
